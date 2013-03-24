@@ -1,9 +1,8 @@
 #!/usr/bin/env sh
 
 cd app &&
-cp ../node-webkit-v0.4.2-linux-x64/nw.pak . && 
 zip -r ../app.nw * &&
-rm nw.pak &&
 cd .. &&
-cat node-webkit-v0.4.2-linux-x64/nw app.nw > pdf-merge && chmod +x pdf-merge #&& 
-#rm app.nw
+cat node-webkit-v0.4.2-linux-x64/nw app.nw > pdf-merge && chmod +x pdf-merge && 
+rm app.nw
+
