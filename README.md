@@ -3,7 +3,7 @@ pdf-merge-nw
 
 A tool to merge several PDF documents into a whole one. Use pdftk so it MUST be installed.
 
-Try it (GNU/Linux)
+Try it (tested on GNU/Linux)
 ==================
 
 Install pdftk. In Debian-like distributions, you can achieve this with the following command:
@@ -21,9 +21,10 @@ chmod +x build
 
 You can then launch the app, either with the CLI (`./pdf-merge`) or with your GUI by launching the executable file `pdf-merge`).
 
+More info about building a NodeWebkit app for other platform on [the NodeWebkit wiki](https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps).
 TODO
 ====
- - move up/down the selected filed;
+ - move up/down the selected files;
  - prompt & save the pdftk path if not available;
  - packaging (?).
 
