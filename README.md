@@ -21,6 +21,13 @@ chmod +x build
 
 You can then launch the app, either with the CLI (`./pdf-merge`) or with your GUI by launching the executable file `pdf-merge`).
 
+TODO
+====
+ - move up/down the selected filed;
+ - prompt & save the pdftk path if not available;
+ - packaging (?).
+
+
 Screenshots
 ===========
 Here are a few screenshots of the app (on GNU/Linux with KDE 4):
