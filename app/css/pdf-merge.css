@@ -1,0 +1,98 @@
+html {
+    width: 640px;
+    height: 460px;
+    margin: 0;
+    font-family: Lucida grande, Tahoma, Verdana, Arial, Sans-serif;
+    color: #181818;
+}
+body {
+    margin: 0;
+    height: 100%;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.08, rgb(100,117,117)),
+        color-stop(0.72, rgb(169,194,194))
+    );
+    background-size: cover;
+}
+
+.row {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row h4 {
+    color: white;
+    margin-bottom: 7px;
+}
+
+.file-chooser-container {
+    padding-top: 30px;
+}
+
+#drop-zone {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.25);
+    height: 250px;
+    border-radius: 7px;
+    border: none;
+    overflow: auto;
+}
+#drop-zone.error {
+    background: rgba(255, 0, 0, 0.25);
+}
+
+#drop-zone .info {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+#drop-zone .file {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(40, 40, 40);
+    font-weight: bold;
+    margin: 5px;
+    padding: 2px 0;
+    border-radius: 3px;
+    border: 1px dotted white;
+}
+
+input#output-filename {
+    text-align: center;
+    width: 500px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 7px;
+    border: none;
+    -webkit-transition: box-shadow 200ms ease-in-out;
+}
+input#output-filename:focus {
+    outline: none;
+    box-shadow: 0 0 5px 3px #99A;
+}
+input#output-filename.error {
+    background: rgba(255, 0, 0, 0.25);
+}
+
+.confirm-container button {
+    background: rgb(255, 255, 255);
+    width: 500px;
+    height: 40px;
+    font-size: 25px;
+    border: 2px solid #C0C0C0;
+    border-top: 2px solid #E0E0E0;
+    border-left: 2px solid #E0E0E0;
+    border-radius: 7px;
+    color: #181818;
+    cursor: pointer;
+    -webkit-transition: all 200ms ease-in-out;
+}
+.confirm-container button:hover {
+    background: rgb(200, 225, 225);
+}
