@@ -69,8 +69,6 @@
             this.classList.remove('dragging');
         }
         function onFileDrop() {
-            console.log('from', dragSrcElt);
-            console.log('to', this);
             this.classList.remove('flown-over');
             dropzone.insertBefore(dragSrcElt, this.nextSibling);
             dragSrcElt = null;
@@ -135,7 +133,7 @@
             if (error) {
                 throw error;
             }
-            console.log('merged ' + inputFiles.length + 'files into ' + outputFile);
+            console.info('merged ' + inputFiles.length + 'files into ' + outputFile);
         });
     }
 
