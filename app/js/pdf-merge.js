@@ -40,12 +40,58 @@
             if (dropzone.getElementsByClassName('info').length) {
                 dropzone.innerHTML = '';
             }
-            var div = document.createElement('div');
+            var div = document.createElement('div'),
+                labelElt = document.createElement('span'),
+                moveUpBtn = document.createElement('button'),
+                moveDownBtn = document.createElement('button');
+
             div.classList.add('file');
             div.setAttribute('data-path', file.path);
             div.setAttribute('data-name', file.name);
-            div.appendChild(document.createTextNode(file.name));
+
+            moveUpBtn.classList.add('move');
+            moveUpBtn.setAttribute('data-type', 'up');
+            moveUpBtn.addEventListener('click', moveFile);
+            moveUpBtn.appendChild(document.createTextNode('↑'));
+            div.appendChild(moveUpBtn);
+
+            moveDownBtn.classList.add('move');
+            moveDownBtn.setAttribute('data-type', 'down');
+            moveDownBtn.addEventListener('click', moveFile);
+            moveDownBtn.appendChild(document.createTextNode('↓'));
+            div.appendChild(moveDownBtn);
+
+            labelElt.classList.add('label');
+            labelElt.appendChild(document.createTextNode(file.name));
+            div.appendChild(labelElt);
+
             dropzone.appendChild(div);
+        }
+/* // Debugging purpose:
+        for (var i = 1; i <= 5; ++i) {
+            addFile({
+                type: 'application/pdf',
+                name: i + '.pdf',
+                path: 'D:\\Documents\\JavaScript\\pdf-merge-nw\\' + i + '.pdf',
+            });
+        }
+*/
+        function moveFile(evt) {
+            var type = evt.srcElement.getAttribute('data-type'),
+                fileElt = evt.srcElement.parentNode;
+
+            // console.log('move ' + type + ' on', fileElt);
+            if (type === 'up') {
+                if (fileElt.previousSibling) {
+                    dropzone.insertBefore(fileElt, fileElt.previousSibling);
+                }
+            } else if (type === 'down') {
+                if (fileElt.nextSibling) {
+                    dropzone.insertBefore(fileElt, fileElt.nextSibling.nextSibling);
+                }
+            } else {
+                throw new Error('cannot move: invalid type `' + type + '`')
+            }
         }
 
         document.getElementById('merge-btn').addEventListener('click', function () {
