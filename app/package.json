@@ -7,9 +7,9 @@
     "window": {
         "icon": "icons/16.png",
         "title": "pdf-merge",
-        "toolbar": false,
+        "toolbar": false,//true,
         "width": 640,
-        "height": 460,
+        "height": 460,//495,
         "position": "center",
         "resizable": false,
         "always-on-top": true,
