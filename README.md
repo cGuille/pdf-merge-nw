@@ -39,6 +39,6 @@ More info about building a NodeWebkit app on [the NodeWebkit wiki](https://githu
 
 Once the project has been built, you will find the executable file into the `dist` folder (report to the section "Run an existing built" above).
 
-###TODO
+##TODO
  - update linux build script;
  - prompt & save the pdftk path if not available.
