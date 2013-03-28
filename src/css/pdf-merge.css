@@ -61,6 +61,21 @@ body {
     padding: 2px 0;
     border-radius: 3px;
     border: 1px dotted white;
+    cursor: pointer;
+    -webkit-transition: all 250ms ease-in-out;
+}
+#drop-zone .file.dragging {
+    opacity: 0.35;
+}
+#drop-zone .file.flown-over {
+    background-image: -webkit-gradient(
+        linear,
+        center top,
+        center bottom,
+        color-stop(0.5, rgba(255, 255, 255, 0)),
+        color-stop(1, rgba(255, 255, 255, 0.8))
+    );
+    background-size: cover;
 }
 
 input#output-filename {

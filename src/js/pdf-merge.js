@@ -42,11 +42,49 @@
             }
             var div = document.createElement('div');
             div.classList.add('file');
+            div.setAttribute('draggable', 'true');
             div.setAttribute('data-path', file.path);
             div.setAttribute('data-name', file.name);
+            div.addEventListener('dragstart', onFileDragStart);
+            div.addEventListener('dragenter', onFileDragEnter);
+            div.addEventListener('dragleave', onFileDragLeave);
+            div.addEventListener('dragend', onFileDragEnd);
+            div.addEventListener('drop', onFileDrop);
             div.appendChild(document.createTextNode(file.name));
             dropzone.appendChild(div);
         }
+
+        var dragSrcElt = null;
+        function onFileDragStart() {
+            dragSrcElt = this;
+            this.classList.add('dragging');
+        }
+        function onFileDragEnter(evt) {
+            this.classList.add('flown-over');
+        }
+        function onFileDragLeave() {
+            this.classList.remove('flown-over');
+        }
+        function onFileDragEnd() {
+            this.classList.remove('dragging');
+        }
+        function onFileDrop() {
+            console.log('from', dragSrcElt);
+            console.log('to', this);
+            this.classList.remove('flown-over');
+            dropzone.insertBefore(dragSrcElt, this.nextSibling);
+            dragSrcElt = null;
+        }
+
+/* // Debugging purpose:
+        for (var i = 1; i <= 5; ++i) {
+            addFile({
+                type: 'application/pdf',
+                name: i + '.pdf',
+                path: 'D:\\Documents\\JavaScript\\pdf-merge-nw\\' + i + '.pdf',
+            });
+        }
+*/
 
         document.getElementById('merge-btn').addEventListener('click', function () {
             var fileElts = dropzone.getElementsByClassName('file'),
