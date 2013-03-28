@@ -1,37 +1,44 @@
-pdf-merge-nw
-============
+#pdf-merge-nw
 
-A tool to merge several PDF documents into a whole one. Use pdftk so it MUST be installed.
+A pdftk GUI front-end to merge several PDF documents into a whole one.
 
-Try it (tested on GNU/Linux)
-==================
+##Try it (tested on GNU/Linux & Windows 7)
 
-Install pdftk. In Debian-like distributions, you can achieve this with the following command:
+First you need to install pdftk (if it is not already installed). In Debian-like distributions, you can achieve this with the following command:
 ```
 sudo apt-get install pdftk
 ```
+Else, you can download it from [the official website](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/).
+**Ensure that the pdftk executable is available from the PATH since pdf-merge will call the command `pdftk`.**
 
-Download the whole repo and build pdf-merge:
-```
-git clone https://github.com/cGuille/pdf-merge-nw.git &&
-cd pdf-merge-nw &&
-chmod +x build
-./build
-```
+Then you have to download the whole repo. You can either get the [zipped version](https://github.com/cGuille/pdf-merge-nw/archive/master.zip) or clone the repo with git (`git clone https://github.com/cGuille/pdf-merge-nw.git`).
 
-You can then launch the app, either with the CLI (`./pdf-merge`) or with your GUI by launching the executable file `pdf-merge`).
+If you download the zipped version,extract it.
 
-More info about building a NodeWebkit app for other platform on [the NodeWebkit wiki](https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps).
-TODO
-====
- - move up/down the selected files;
- - prompt & save the pdftk path if not available;
- - packaging (?).
+##Run an existing built
+
+The project may have been built for your platform, check the `dist` folder:
+###On Windows:
+If there is a `pdf-merge.exe` file located in `dist/win`, you can just run it with a double click.
+###On GNU/LINUX:
+If there is a `pdf-merge` file located in `dist/linux`, you can just run it with a double click.
+
+Not that there is no warranty for these files to be up to date. If you want to ensure that, or if the file for your platform is missing, you will have to build the project yourself (see the build section below).
 
 
-Screenshots
-===========
-Here are a few screenshots of the app (on GNU/Linux with KDE 4):
-![Dropping PDF files](http://publisher.guillaumecharmetant.com/pdf-merge-screenshots/pdfmerge-s1.png)
-![Files has been dropped, ready to merge](http://publisher.guillaumecharmetant.com/pdf-merge-screenshots/pdfmerge-s2.png)
-![Merge button clicked, back to the file browser](http://publisher.guillaumecharmetant.com/pdf-merge-screenshots/pdfmerge-s3.png)
+##Build the project
+
+###On Windows:
+ - zip the content of the `src` folder (the **content** of the folder, **not the folder itself**), call the zip file `src.nw` (without the .zip extension, it's ok!) and put it into the `build` folder;
+ - go to the `win` folder, located right into the `build` directory, and execute the batch file called `build.bat` with a double click.
+
+###On GNU/Linux:
+  - simply run the shell script `build.sh` located on build/linux. - **_caution:_ currently out of date** [TODO]
+
+More info about building a NodeWebkit app on [the NodeWebkit wiki](https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps).
+
+Once the project has been built, you will find the executable file into the `dist` folder (report to the section "Run an existing built" above).
+
+###TODO
+ - update linux build script;
+ - prompt & save the pdftk path if not available.
