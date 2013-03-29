@@ -1,15 +1,15 @@
 {
     "name": "pdf-merge",
     "main": "index.html",
-    "description": "A tool to merge several PDF documents into a whole one. Use pdftk so it MUST be installed.",
+    "description": "A pdftk GUI front-end to merge several PDF documents into a whole one.",
     "version": "0.1.0",
     "keywords": ["pdftk", "pdf", "merge", "gui"],
     "window": {
         "icon": "icons/16.png",
         "title": "pdf-merge",
-        "toolbar": false,//true,
+        "toolbar": false,
         "width": 640,
-        "height": 460,//495,
+        "height": 460,
         "position": "center",
         "resizable": false,
         "always-on-top": true,
