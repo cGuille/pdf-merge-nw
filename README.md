@@ -50,7 +50,9 @@ bin/node-webkit.app/Contents/MacOS/node-webkit src
  - in the `build` directory, go to the `win` folder and execute the batch file called `build.bat` (double click the file).
 
 ###On GNU/Linux (64 bits, you may adapt the script for 32 bits systems):
-  - simply run the shell script `build.sh` located on `build/linux`. Not that you must launch the script from the `build/linux` directory and you may have to add the permission to execute the script.
+ - open a terminal and go to the directory `build/linux`;
+ - give the build script the permission to be executed with `chmod +x build.sh`;
+ - run `./build.sh 32` or `./build.sh 64` whether you want to build the 32 or 64 bits version.
 
 More info about building a Node-Webkit app on [the Node-Webkit wiki](https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps).
 
