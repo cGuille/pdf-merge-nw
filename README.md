@@ -2,7 +2,9 @@
 
 A pdftk GUI front-end to merge several PDF documents into a whole one.
 
-##Try it (tested on GNU/Linux & Windows 7)
+#Try it
+
+##Install pdftk
 
 First you need to install pdftk (if it is not already installed). In Debian-like distributions, you can achieve this with the following command:
 ```
@@ -66,7 +68,7 @@ A double click on the file `pdf-merge.exe` located in `dist/win` should launch t
 A double click on the file `pdf-merge` located in `dist/linux` should launch the app.
 
 
-##TODO
+#TODO
  - remove a file from the list;
  - better drag & drop to move the list items;
  - prompt & save the pdftk path if not available.
