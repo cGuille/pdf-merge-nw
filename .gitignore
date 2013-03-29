@@ -1,2 +1,2 @@
-app.nw
-pdf-merge
+dist/*/pdf-merge*
+bin/src.nw
