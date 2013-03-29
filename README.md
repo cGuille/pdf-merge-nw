@@ -22,15 +22,17 @@ Open a terminal (`cmd.exe`), go to the project root (use `cd` to change director
 bin\win\nw.exe src
 ```
 ###On GNU/Linux:
-Open a terminal, go to the project root (use `cd` to change directory) and run the following command:
+Open a terminal, go to the project root (use `cd` to change directory) and run the following commands:
 - for 64 bits systems:
 
 ```sh
+chmod +x bin/node-webkit-v0.4.2-linux-x64/nw
 bin/node-webkit-v0.4.2-linux-x64/nw src
 ```
 - for 32 bits systems:
 
 ```sh
+chmod +x bin/node-webkit-v0.4.2-linux-ia32/nw
 bin/node-webkit-v0.4.2-linux-ia32/nw src
 ```
 ###On Mac OS:
@@ -48,7 +50,7 @@ bin/node-webkit.app/Contents/MacOS/node-webkit src
  - in the `build` directory, go to the `win` folder and execute the batch file called `build.bat` (double click the file).
 
 ###On GNU/Linux (64 bits, you may adapt the script for 32 bits systems):
-  - simply run the shell script `build.sh` located on `build/linux`. Not that you must launch the script from the `build/linux` directory.
+  - simply run the shell script `build.sh` located on `build/linux`. Not that you must launch the script from the `build/linux` directory and you may have to add the permission to execute the script.
 
 More info about building a Node-Webkit app on [the Node-Webkit wiki](https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps).
 
