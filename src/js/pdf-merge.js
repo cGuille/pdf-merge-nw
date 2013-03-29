@@ -125,11 +125,11 @@
         var command = 'pdftk ',
             operand = 'cat output ';
 
+        inputFiles = inputFiles.map(function (path) { return '"' + path + '"'; });
         command += inputFiles.join(' ') + ' ';
         command += operand;
-        command += outputFile;
+        command += '"' + outputFile + '"';
 
-        
         require('child_process').exec(command, function (error, stdout, stderr) {
             if (error) {
                 throw error;
