@@ -29,8 +29,9 @@ Not that there is no warranty for these files to be up to date. If you want to e
 ##Build the project
 
 ###On Windows:
- - zip the content of the `src` folder (the **content** of the folder, **not the folder itself**), call the zip file `src.nw` (without the .zip extension, it's ok!) and put it into the `build` folder;
- - go to the `win` folder, located right into the `build` directory, and execute the batch file called `build.bat` with a double click.
+ - zip the content of the `src` folder (the **content** of the folder, **not the folder itself**);
+ - rename the zip file `src.nw` (without the .zip extension, it's ok!) and put it right into the `build` folder;
+ - go to the `win` folder, located in the `build` directory, and execute the batch file called `build.bat` with a double click.
 
 ###On GNU/Linux:
   - simply run the shell script `build.sh` located on build/linux. - **_caution:_ currently out of date** [TODO]
