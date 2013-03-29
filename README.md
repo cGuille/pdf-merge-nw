@@ -2,20 +2,27 @@
 
 A pdftk GUI front-end to merge several PDF documents into a whole one.
 
-#Try it
 
-##Install pdftk
+#Install pdftk
 
-First you need to install pdftk (if it is not already installed). In Debian-like distributions, you can achieve this with the following command:
+In order to run pdf-merge, you'll need to install pdftk (if it is not already installed). On Debian-like distributions, you can achieve this with the following command:
 ```
 sudo apt-get install pdftk
 ```
 Else, you can download it from [the official website](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/).
 **Ensure that the pdftk executable is available from the PATH since pdf-merge will call the command `pdftk`.**
 
-Then you have to download the whole repo. You can either get the [zipped version](https://github.com/cGuille/pdf-merge-nw/archive/master.zip) or clone the repo with git (`git clone https://github.com/cGuille/pdf-merge-nw.git`).
+#Get a distributable version
+Check out the [available distributables files](http://publisher.guillaumecharmetant.com/pdf-merge-distributables/) for your platform.
+
+
+#Run / Build from the sources
+
+First of all, you have to download the whole repo. You can either get the [zipped version](https://github.com/cGuille/pdf-merge-nw/archive/master.zip) or clone the repo with git (`git clone https://github.com/cGuille/pdf-merge-nw.git`).
 
 If you download the zipped version,extract it.
+
+Then you can just [run from the sources](https://github.com/cGuille/pdf-merge-nw#run-from-the-source) or [build the project](https://github.com/cGuille/pdf-merge-nw#build-the-project) and [run the packaged version](https://github.com/cGuille/pdf-merge-nw#run-an-existing-built).
 
 ##Run from the source
 ###On Windows:
