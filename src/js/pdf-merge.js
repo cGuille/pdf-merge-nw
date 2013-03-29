@@ -92,6 +92,7 @@
 
             if (fileElts.length < 2) {
                 dropzone.classList.add('error');
+                return;
             }
 
             if (!outputFileName) {
