@@ -24,7 +24,7 @@ If you download the zipped version,extract it.
  - in the `build` directory, go to the `win` folder and execute the batch file called `build.bat` (double click the file).
 
 ###On GNU/Linux:
-  - simply run the shell script `build.sh` located on build/linux. - **_caution:_ currently out of date** [TODO]
+  - simply run the shell script `build.sh` located on `build/linux`. Not that you must launch the script from the `build/linux` directory.
 
 More info about building a NodeWebkit app on [the NodeWebkit wiki](https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps).
 
@@ -39,5 +39,6 @@ A double click on the file `pdf-merge` located in `dist/linux` should launch the
 
 
 ##TODO
- - update linux build script;
+ - remove a file from the list;
+ - better drag & drop to move the list items;
  - prompt & save the pdftk path if not available.
