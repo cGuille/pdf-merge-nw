@@ -15,6 +15,30 @@ Then you have to download the whole repo. You can either get the [zipped version
 
 If you download the zipped version,extract it.
 
+##Run from the source
+###On Windows:
+Open a terminal (`cmd.exe`), go to the project root (use `cd` to change directory) and run the following command:
+```batch
+bin\win\nw.exe src
+```
+###On GNU/Linux:
+Open a terminal, go to the project root (use `cd` to change directory) and run the following command:
+- for 64 bits systems:
+
+```sh
+bin/node-webkit-v0.4.2-linux-x64/nw src
+```
+- for 32 bits systems:
+
+```sh
+bin/node-webkit-v0.4.2-linux-ia32/nw src
+```
+###On Mac OS:
+Open a terminal, go to the project root (use `cd` to change directory) and run the following command:
+```sh
+bin/node-webkit.app/Contents/MacOS/node-webkit src
+```
+
 
 ##Build the project
 
@@ -23,10 +47,10 @@ If you download the zipped version,extract it.
  - rename the zip file `src.nw` (without the .zip extension, it's ok!) and put it right into the `bin` folder;
  - in the `build` directory, go to the `win` folder and execute the batch file called `build.bat` (double click the file).
 
-###On GNU/Linux:
+###On GNU/Linux (64 bits, you may adapt the script for 32 bits systems):
   - simply run the shell script `build.sh` located on `build/linux`. Not that you must launch the script from the `build/linux` directory.
 
-More info about building a NodeWebkit app on [the NodeWebkit wiki](https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps).
+More info about building a Node-Webkit app on [the Node-Webkit wiki](https://github.com/rogerwang/node-webkit/wiki/How-to-package-and-distribute-your-apps).
 
 
 ##Run an existing built
