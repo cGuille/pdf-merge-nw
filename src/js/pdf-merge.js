@@ -7,7 +7,8 @@
 
     function run() {
     var dropzone = document.getElementById('drop-zone'),
-        outputFileNameInput = document.getElementById('output-filename');
+        outputFileNameInput = document.getElementById('output-filename'),
+        dropzoneInfo;
 
         function stopEvent(evt) {
             evt.stopPropagation();
@@ -38,6 +39,7 @@
 
         function addFile(file) {
             if (dropzone.getElementsByClassName('info').length) {
+                dropzoneInfo = dropzone.removeChild(dropzone.childNodes[0]);
                 dropzone.innerHTML = '';
             }
             var div = document.createElement('div');
@@ -53,7 +55,8 @@
 
             var rmBtnElt = document.createElement('button');
             rmBtnElt.classList.add('remove');
-            rmBtnElt.addEventListener('click', function (evt) { console.log(evt); });
+            rmBtnElt.addEventListener('click', onFileRemove);
+            rmBtnElt.appendChild(document.createTextNode('×'))
             div.appendChild(rmBtnElt);
 
             var labelElt = document.createElement('span');
@@ -61,7 +64,6 @@
             labelElt.appendChild(document.createTextNode(file.name));
             div.appendChild(labelElt);
 
-            div.appendChild(document.createTextNode(file.name));
             dropzone.appendChild(div);
         }
 
@@ -84,8 +86,14 @@
             dropzone.insertBefore(dragSrcElt, this.nextSibling);
             dragSrcElt = null;
         }
+        function onFileRemove() {
+            dropzone.removeChild(this.parentNode);
+            if (!dropzone.childNodes.length) {
+                dropzone.appendChild(dropzoneInfo);
+            }
+        }
 
-/* // Debugging purpose:
+//* Debugging purpose:
         for (var i = 1; i <= 5; ++i) {
             addFile({
                 type: 'application/pdf',
@@ -93,7 +101,7 @@
                 path: 'D:\\Documents\\JavaScript\\pdf-merge-nw\\' + i + '.pdf',
             });
         }
-*/
+//*/
 
         document.getElementById('merge-btn').addEventListener('click', function () {
             var fileElts = dropzone.getElementsByClassName('file'),
