@@ -50,6 +50,17 @@
             div.addEventListener('dragleave', onFileDragLeave);
             div.addEventListener('dragend', onFileDragEnd);
             div.addEventListener('drop', onFileDrop);
+
+            var rmBtnElt = document.createElement('button');
+            rmBtnElt.classList.add('remove');
+            rmBtnElt.addEventListener('click', function (evt) { console.log(evt); });
+            div.appendChild(rmBtnElt);
+
+            var labelElt = document.createElement('span');
+            labelElt.classList.add('label');
+            labelElt.appendChild(document.createTextNode(file.name));
+            div.appendChild(labelElt);
+
             div.appendChild(document.createTextNode(file.name));
             dropzone.appendChild(div);
         }

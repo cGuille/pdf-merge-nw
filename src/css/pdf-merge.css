@@ -78,6 +78,14 @@ body {
     background-size: cover;
 }
 
+#drop-zone .file .label {
+    display: block;
+}
+
+#drop-zone .file button.remove {
+    float: right;
+}
+
 input#output-filename {
     text-align: center;
     width: 500px;
