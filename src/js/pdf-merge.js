@@ -95,7 +95,7 @@
             }
         }
 
-//* Debugging purpose:
+/* Debugging purpose:
         for (var i = 1; i <= 5; ++i) {
             addFile({
                 type: 'application/pdf',
@@ -103,7 +103,7 @@
                 path: 'D:\\Documents\\JavaScript\\pdf-merge-nw\\' + i + '.pdf',
             });
         }
-//*/
+*/
 
         document.getElementById('merge-btn').addEventListener('click', function () {
             var fileElts = dropzone.getElementsByClassName('file'),
