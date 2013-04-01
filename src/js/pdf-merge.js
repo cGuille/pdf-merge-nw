@@ -47,6 +47,7 @@
             div.setAttribute('draggable', 'true');
             div.setAttribute('data-path', file.path);
             div.setAttribute('data-name', file.name);
+            div.setAttribute('title', 'Drag to move');
             div.addEventListener('dragstart', onFileDragStart);
             div.addEventListener('dragenter', onFileDragEnter);
             div.addEventListener('dragleave', onFileDragLeave);
@@ -56,6 +57,7 @@
             var rmBtnElt = document.createElement('button');
             rmBtnElt.classList.add('remove');
             rmBtnElt.addEventListener('click', onFileRemove);
+            rmBtnElt.setAttribute('title', 'Remove this file from the list');
             rmBtnElt.appendChild(document.createTextNode('×'))
             div.appendChild(rmBtnElt);
 
