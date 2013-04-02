@@ -76,7 +76,6 @@ A double click on the file `pdf-merge` located in `dist/linux` should launch the
 
 
 #TODO
- - remove a file from the list;
- - better drag & drop to move the list items;
+ - better drag & drop to move the list items (?);
  - MacOS build script;
  - prompt & save the pdftk path if not available.
